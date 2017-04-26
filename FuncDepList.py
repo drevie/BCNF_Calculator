@@ -1,3 +1,5 @@
+""" This class is a list of functional dependencies """
+
 
 class FuncDepList:
 

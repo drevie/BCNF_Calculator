@@ -1,3 +1,7 @@
+""" Class to contain a functional dependency """
+
+# Note that we seperate the dependency into its left and right side to make computations on it easier
+
 
 class FunctionalDependency:
 

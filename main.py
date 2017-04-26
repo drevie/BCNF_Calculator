@@ -1,4 +1,3 @@
-import Relation
 import Stack
 import FunctionalDependency
 import FuncDepList
