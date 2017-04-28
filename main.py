@@ -224,13 +224,16 @@ def decomposition(R, L):
         else:
             # print("We are pushing smaller stuff onto the stack")
             S.push(list(set(F.lhs()) | set(F.rhs())))
-            S.push(list(set(A) - set(F.rhs())))
+            subtractSet = set(F.rhs()) - set(F.lhs())
+            S.push(list(set(A) - subtractSet))
 
-            print("Printing stack push")
+            
+            print("Relationship: " + str(A))
+            print("Printing stack push 1")
             print(str(list(set(F.lhs()) | set(F.rhs()))))
-            print("Printing stack push")
-            print(list(set(A) - set(F.rhs())))
-            input()
+            print("Printing stack push 2")
+            print(list(set(A) - subtractSet))
+
 
     return db
 
@@ -245,21 +248,20 @@ def BCNF_Violation(F, A, printFlag):
     # print("not (set(A) <= (set(F.rhs()) | set(F.lhs()))) = " + str(not (set(A) <= (set(F.rhs()) | set(F.lhs())))))
 
     if(set(F.lhs()) <= set(A) and not (set(A) <= (set(F.rhs()) | set(F.lhs())))):
-
-        if(set(A) - set(F.rhs()) == set(A)):
+        subtractSet = set(F.rhs()) - set(F.lhs())
+        if(set(A) - subtractSet == set(A)):
             print("Announcement FAQ #2")
             return False
 
-
+        print("F = " + str(F.lhs()) + "->" + str(F.rhs()))
         print("BCNF Violation")
         return True
 
     else:
         if printFlag:
             print("BCNF NON Violation")
-            # print("F = " + str(F.lhs()) + "->" + str(F.rhs()))
+            #
         return False
-
 
 
 if __name__ == "__main__":
