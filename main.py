@@ -40,7 +40,7 @@ class FD:
 
             for i in range(len(DependencyList.functionalDependencyList)):
 
-                if(set(DependencyList.functionalDependencyList[i].left) < set(right)):
+                if(set(DependencyList.functionalDependencyList[i].left) <= set(right)):
                     axiom_2_list.append(DependencyList.functionalDependencyList[i].right)
                 else:
                     continue
