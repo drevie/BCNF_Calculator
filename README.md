@@ -16,3 +16,12 @@ Required Classes:
 3. F - A functional dependency
 
 4. DB - Contains BCNF Decomposition of original relation
+
+
+
+*** To calculate the closure of a function depdency we are using the following theorems ***
+	A) *Reflexivity* If Y issubset X then X -> Y
+	B) *Augmentation* If X -> Y => in Z issubset R XZ -> YZ
+	C) *Transitivity* If X -> Y and Y -> Z => X -> Z
+
+-Special note, the rhs() function of a FD only implementes Axioms A and C. To make sure it is robust we must add Axiom B.  
