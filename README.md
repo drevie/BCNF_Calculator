@@ -13,4 +13,6 @@ Required Classes:
 
 2. R - A relation is a set of attributes and can be implemented using an array of integers with valeus 0 	or 1. A[i] = 1 implies that the attribute with ASCII i is in the relation
 
-3. F - A functional dep
+3. F - A functional dependency
+
+4. DB - Contains BCNF Decomposition of original relation
