@@ -19,9 +19,11 @@ Required Classes:
 
 
 
- To calculate the closure of a function depdency we are using the following theorems
-	1. Reflexivity If Y issubset X then X -> Y
-	2. Augmentation If X -> Y => in Z issubset R XZ -> YZ
-	3. Transitivity If X -> Y and Y -> Z => X -> Z
+To calculate the closure of a function depdency we are using the following theorems:
+1. Reflexivity If Y issubset X then X -> Y
+
+2. Augmentation If X -> Y => in Z issubset R XZ -> YZ
+
+3. Transitivity If X -> Y and Y -> Z => X -> Z
 
 -Special note, the rhs() function of a FD only implementes Axioms 1 and 3. To make sure it is robust we must add Axiom B.  
